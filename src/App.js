@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import FlashCard from './pages/FlashCard';
 import Dashboard from './pages/Dashboard';
 import Card from './pages/Card';
+import Edit from './pages/Editpage';
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FlashCard />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/edit" element={<Edit />} />
           <Route path="/card/:id" element={<Card />} />
         </Routes>
       </Router>

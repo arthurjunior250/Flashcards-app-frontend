@@ -38,7 +38,7 @@ const Card = () => {
             </div>
             <div className='flex flex-col justify-between mt-2'>
               <DeleteCardButton cardId={data.oneCard.id} />
-              <Link to="/dashboard" className='mt-2 w-[7%] text-md font-normal border-2 border-blue-700 rounded-2xl px-4 py-2 hover:bg-white bg-orange-400 hover:text-blue-700'>Back</Link>
+              <Link to="/edit" className='mt-2 w-[7%] text-md font-normal border-2 border-blue-700 rounded-2xl px-4 py-2 hover:bg-white bg-orange-400 hover:text-blue-700'>Back</Link>
             </div>
             
           </div>
