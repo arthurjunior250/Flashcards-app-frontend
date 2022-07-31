@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_CARD } from '../mutations/cardMutations';
 import { GET_CARDS } from '../queries/cardQuery';
+import swal from 'sweetalert';
 
 
 const AddCardForm = ({ card }) => {
@@ -26,6 +27,7 @@ const AddCardForm = ({ card }) => {
       return alert('Please fill in all fields')
     }
     createCard(question, description, answer);
+    swal("Good job!", "Question created successfully!", "success");
     setQuestion('')
     setDescription('')
     setAnswer('')

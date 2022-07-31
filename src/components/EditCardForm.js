@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { GET_CARD } from '../queries/cardQuery';
 import { UPDATE_CARD } from '../mutations/cardMutations';
+import swal from 'sweetalert';
 
 const EditCardForm = ({ card }) => {
   const [question, setQuestion] = useState(card.question)
@@ -19,6 +20,7 @@ const EditCardForm = ({ card }) => {
       return alert('Please fill out all fields')
     }
     updateCard(question, description, answer)
+    swal("Good job!", "Question edited successfully!", "success");
   }
   return (
     <div className='mt-5'>
