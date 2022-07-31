@@ -5,6 +5,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache} from
 import Header from "./components/Header";
 import FlashCard from './pages/FlashCard';
 import Dashboard from './pages/Dashboard';
+import Card from './pages/Card';
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -21,7 +22,8 @@ const cache = new InMemoryCache({
 })
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/',
+  // uri: 'http://localhost:5000/',
+  uri: 'https://flashcard-backend-app.herokuapp.com/graphql',
   cache
 })
 
@@ -35,6 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FlashCard />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/card/:id" element={<Card />} />
         </Routes>
       </Router>
     </ApolloProvider>
